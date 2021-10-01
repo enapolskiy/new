@@ -1,34 +1,23 @@
-
+import React from "react"
 import './App.css';
 import Header from "./components/Header/Header";
+import Nav from "./components/Nav/Nav";
+import Section from "./components/Section/Section";
+import Aside from "./components/Aside/Aside";
+import Footer from "./components/Footer/Footer";
+import Example1 from "./components/Example1/Example1";
+import Example2 from "./components/Example2/Example2";
 
 function App() {
   return (
     <div className="App-cont">
      <Header />
-
-      <nav className="Nav">
-          <ul className="content">
-              <li className="item">
-<h3>Example 1</h3>
-              </li>
-              <li className="item">
-                  <h3>Example 2</h3>
-              </li>
-              <li className="item">
-                  <h3>Example 3</h3>
-              </li>
-              <li className="item">
-                  <h3>Example 4</h3>
-              </li>
-          </ul>
-      </nav>
-
-      <section className="Section">Основной контент</section>
-
-      <aside className="Aside">Блок виджетов</aside>
-
-      <footer className="Footer">Подвал</footer>
+     <Nav />
+     {/*<Section />*/}
+     <Aside />
+     <Footer />
+     <Example1 />
+     {/*<Example2 />*/}
 
     </div>
 

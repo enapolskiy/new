@@ -1,0 +1,15 @@
+nav     { grid-area: nav;
+    height: 500px;
+    overflow: hidden;
+    text-align: center;
+    display: block;
+    background-color: maroon}
+
+.content {
+margin-top: 100px;
+}
+
+div a{
+    color: aliceblue;
+ text-decoration: none;
+}
