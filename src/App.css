@@ -1,0 +1,30 @@
+
+.App-cont {
+    display: grid;
+
+    grid: "header header header" 800px
+
+          "nav    section aside"  1fr
+
+          "footer footer footer" 500px
+
+  / 15%   1fr     18%;
+
+
+
+    /*min-height: 100vh;*/
+}
+
+
+nav     { grid-area: nav;
+    padding-top: 500px;
+background-color: maroon}
+
+section { grid-area: section;
+background-color: blue}
+
+aside   { grid-area: aside;
+background-color: aquamarine}
+
+footer  { grid-area: footer;
+background-color: gainsboro}
