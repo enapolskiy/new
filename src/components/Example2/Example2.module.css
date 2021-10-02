@@ -1,0 +1,6 @@
+.content {grid-area: section;
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("https://i.ytimg.com/vi/nukXKKPueTQ/maxresdefault.jpg");
+}

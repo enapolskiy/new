@@ -3,23 +3,32 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
 import Section from "./components/Section/Section";
-import Aside from "./components/Aside/Aside";
-import Footer from "./components/Footer/Footer";
 import Example1 from "./components/Example1/Example1";
 import Example2 from "./components/Example2/Example2";
+import Example3 from "./components/Example3/Example3";
+import Example4 from "./components/Example4/Example4";
+import Footer from "./components/Footer/Footer";
+import MyPosts from "./components/MyPosts/MyPosts";
+import {BrowserRouter, Route} from "react-router-dom";
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App-cont">
      <Header />
      <Nav />
-     {/*<Section />*/}
-     <Aside />
+     <MyPosts />
+     <Route path='/section' component = {Section} />
+        <Route path='/example1' component={Example1} />
+        <Route path='/example2' component={Example2} />
+        <Route path='/example3' component={Example3} />
+        <Route path='/example4' component={Example4} />
+     <MyPosts />
      <Footer />
-     <Example1 />
-     {/*<Example2 />*/}
+
 
     </div>
+</BrowserRouter>
 
 
 

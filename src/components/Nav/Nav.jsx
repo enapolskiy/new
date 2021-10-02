@@ -1,23 +1,24 @@
 import style from "./Nav.module.css";
+import {NavLink} from "react-router-dom";
 
 const Nav = (props) =>{
     return (
         <nav className="Nav">
             <div className="content" >
                 <div className="item">
-                    <a href="/example1"> <h3>Example 1</h3></a>
+                    <NavLink to="/example1"> <h3>Example 1</h3></NavLink>
 
                 </div>
                 <div className="item">
-                    <a href="/example2"><h3>Example 2</h3></a>
+                    <NavLink to="/example2"><h3>Example 2</h3></NavLink>
 
                 </div>
                 <div className="item">
-                    <a href="/example3"> <h3>Example 3</h3></a>
+                    <NavLink to="/example3"> <h3>Example 3</h3></NavLink>
 
                 </div>
                 <div className="item">
-                    <a href="/example4"><h3>Example 4</h3></a>
+                    <NavLink to="/example4"><h3>Example 4</h3></NavLink>
 
                 </div>
             </div>

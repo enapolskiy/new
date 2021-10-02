@@ -1,7 +1,9 @@
+import style from "./Example4.module.css"
+
 const Example4 = (props) => {
     return (
-        <div>
-            Example 4
+        <div className={style.content}>
+
         </div>
     )
 }

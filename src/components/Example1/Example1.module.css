@@ -1,4 +1,6 @@
 .content { grid-area: section;
     background-color: blue;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC0_LLI4bq2q1_XlPKNCytGcZWhD3-IGv38Q&usqp=CAU");
+    background-image: url("https://i.kym-cdn.com/entries/icons/original/000/032/588/4f1095dd0047a26764332ec35a5b5365.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }

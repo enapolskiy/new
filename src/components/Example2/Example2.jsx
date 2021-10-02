@@ -1,9 +1,9 @@
-import React from "react"
+import style from "./Example2.module.css"
 
 const Example2 = (props) => {
     return (
-        <div>
-            Example 2
+        <div className={style.content}>
+
         </div>
     )
 }
