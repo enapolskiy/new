@@ -11,7 +11,7 @@ const MyPosts = (props) => {
                 New post
             </div>
             <div className={style.posts}>
-                <Post message='Hi! how are you?' like='Like 15'/>
+                <Post message='Hi! how are you?' like='Like 16'/>
                 <Post message='Its my first post!' like='Like 12' />
 
             </div>
