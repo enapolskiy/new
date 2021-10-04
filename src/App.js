@@ -10,6 +10,7 @@ import Example4 from "./components/Example4/Example4";
 import Footer from "./components/Footer/Footer";
 import MyPosts from "./components/MyPosts/MyPosts";
 import {BrowserRouter, Route} from "react-router-dom";
+import Messages from "./components/Messages/Messages";
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
      <Header />
      <Nav />
      <MyPosts />
-     <Route path='/section' component = {Section} />
+        <Route path='/section' component = {Section} />
         <Route path='/example1' component={Example1} />
         <Route path='/example2' component={Example2} />
         <Route path='/example3' component={Example3} />
         <Route path='/example4' component={Example4} />
+        <Route path='/messages' component={Messages} />
      <MyPosts />
      <Footer />
 

@@ -1,0 +1,28 @@
+.content {
+    grid-area: section;
+ /*display: flex;*/
+ /*   justify-content: space-evenly;*/
+    background-color: aquamarine;
+}
+
+.messages {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    color: black;
+}
+
+.messages a {
+    color: black;
+}
+
+.senderMessage {
+    padding: 20px;
+}
+
+.senderMessage .activeLink {
+    color: coral;
+}
+
+.message {
+    padding: 20px;
+}

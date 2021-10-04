@@ -2,7 +2,7 @@
 .App-cont {
     display: grid;
 
-    grid: "header header header" 800px
+    grid: "header header header" 500px
 
           "nav  section aside"  500px
 

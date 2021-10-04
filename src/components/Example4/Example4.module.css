@@ -1,4 +1,5 @@
-.content {grid-area: section;
+.content {
+    grid-area: section;
     background-repeat: no-repeat;
     background-size: 100%;
     background-image: url("https://www.scoutmag.ph/wp-content/uploads/2021/03/photo6187964069059865479.jpg");

@@ -21,6 +21,10 @@ const Nav = (props) =>{
                     <NavLink to="/example4"><h3>Example 4</h3></NavLink>
 
                 </div>
+                <div className="item">
+                    <NavLink to="/messages"><h3>Messages</h3></NavLink>
+
+                </div>
             </div>
         </nav>
     )
