@@ -1,5 +1,6 @@
 import style from "./MyPosts.module.css"
 import Post from "./Post/Post";
+import Chat from "./Chat/Chat";
 
 const MyPosts = (props) => {
     let posts = [
@@ -12,19 +13,12 @@ const MyPosts = (props) => {
     ]
     let postsItem = posts.map (post => <Post message={post.message} like={post.LikeCount}/>)
     return (
-        <div className={style.posts}>
-            My posts
-            <textarea></textarea>
-            <button>Add post</button>
-            <div>
-                New post
-            </div>
-            <div className={style.posts}>
-                {postsItem}
-            </div>
-
-
+        <div>
+        <Chat />
+            {postsItem}
         </div>
+
+
     )
 }
 export default MyPosts;

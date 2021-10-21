@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import MyPosts from "./components/MyPosts/MyPosts";
 import {BrowserRouter, Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
+import Chat from "./components/MyPosts/Chat/Chat";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Route path='/example3' component={Example3} />
         <Route path='/example4' component={Example4} />
         <Route path='/messages' component={Messages} />
-     <MyPosts />
+        <Chat />
      <Footer />
 
 
