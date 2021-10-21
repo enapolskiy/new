@@ -8,10 +8,12 @@ const  Post = (props) => {
             {props.message}
 
             <div>
-<div>
-    {props.like}
-</div>
+                <div>
+                    {props.like}
+                </div>
+
             </div>
+
         </div>
     )
 }

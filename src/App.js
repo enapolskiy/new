@@ -8,25 +8,26 @@ import Example2 from "./components/Example2/Example2";
 import Example3 from "./components/Example3/Example3";
 import Example4 from "./components/Example4/Example4";
 import Footer from "./components/Footer/Footer";
-import MyPosts from "./components/MyPosts/MyPosts";
 import {BrowserRouter, Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
-import Chat from "./components/MyPosts/Chat/Chat";
+import MyPosts from "./components/ChatDesk/MyPosts";
 
-function App() {
+
+function App(props) {
+
   return (
     <BrowserRouter>
     <div className="App-cont">
      <Header />
      <Nav />
-     <MyPosts />
+
         <Route path='/section' component = {Section} />
         <Route path='/example1' component={Example1} />
         <Route path='/example2' component={Example2} />
         <Route path='/example3' component={Example3} />
         <Route path='/example4' component={Example4} />
-        <Route path='/messages' component={Messages} />
-        <Chat />
+        <Route path='/messages' render={ ()=><Messages sendData={props.sendData} messageData={props.messageData} />} />
+         <Route path='myposts' render={ ()=> <MyPosts ChatMessage={props.ChatMessage} />}  />
      <Footer />
 
 

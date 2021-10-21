@@ -1,2 +1,6 @@
 .posts   { grid-area: aside;
     background-color: aquamarine}
+
+.chatItem {
+    margin-left: 20px;
+}
