@@ -2,5 +2,6 @@
     background-color: aquamarine}
 
 .chatItem {
-    margin-left: 20px;
+    padding-left: 20px;
+    background-color: maroon;
 }

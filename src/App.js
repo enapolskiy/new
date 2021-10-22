@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import {BrowserRouter, Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
 import MyPosts from "./components/ChatDesk/MyPosts";
+import Chat from "./components/ChatDesk/Chat/Chat";
 
 
 function App(props) {
@@ -27,7 +28,8 @@ function App(props) {
         <Route path='/example3' component={Example3} />
         <Route path='/example4' component={Example4} />
         <Route path='/messages' render={ ()=><Messages sendData={props.sendData} messageData={props.messageData} />} />
-         <Route path='myposts' render={ ()=> <MyPosts ChatMessage={props.ChatMessage} />}  />
+        <Route  render={ ()=> <MyPosts ChatMessage={props.ChatMessage} />}  />
+        {/*<Route render ={ ()=>< Chat ChatMessage={props.ChatMessage} />} />*/}
      <Footer />
 
 

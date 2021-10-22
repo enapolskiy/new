@@ -19,12 +19,12 @@ let messageData = [
     {id: 5, message: "Cool site eah!!"}
 ]
 let ChatMessage = [
-    {id:1, message:"Hi! how are you?", like:"likes 12"},
-    {id:2, message:"Its my first post!", like:"likes 22"},
-    {id:1, message:"Hi! how are you?", like:"likes 12"},
-    {id:2, message:"Its my first post!", like:"likes 22"},
-    {id:1, message:"Hi! how are you?", like:"likes 12"},
-    {id:2, message:"Its my first post!", like:"likes 22"}
+    {id:1, message:"Hi! how are you?32", like:"likes 12"},
+    {id:2, message:"Its my first post77!", like:"likes 22"},
+    {id:3, message:"Hi! how are you?6767", like:"likes 12"},
+    {id:4, message:"Its my first post!&^", like:"likes 22"}
+
+
 ]
 
 ReactDOM.render(
