@@ -27,9 +27,9 @@ function App(props) {
         <Route path='/example2' component={Example2} />
         <Route path='/example3' component={Example3} />
         <Route path='/example4' component={Example4} />
-        <Route path='/messages' render={ ()=><Messages sendData={props.sendData} messageData={props.messageData} />} />
-        <Route  render={ ()=> <MyPosts ChatMessage={props.ChatMessage} />}  />
-        {/*<Route render ={ ()=>< Chat ChatMessage={props.ChatMessage} />} />*/}
+        <Route path='/messages' render={ ()=><Messages state={props.state.dialogsPage} messageData={props.state.dialogsPage} />} />
+        <MyPosts state={props.state.chatPage} />
+        <Section  />
      <Footer />
 
 

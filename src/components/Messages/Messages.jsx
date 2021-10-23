@@ -7,8 +7,8 @@ import MessageItem from "./MessagesItem/MessagesItem";
 <MessageItem />;
 
 const Messages = (props) => {
-    let sendElement = props.sendData.map (send =>  <DialogItem name={send.name} id={send.id}/>)
-    let messageElement = props.messageData.map (mes => <MessageItem message={mes.message} />)
+    let sendElement = props.state.sendData.map (send =>  <DialogItem name={send.name} id={send.id}/>)
+    let messageElement = props.state.messageData.map (mes => <MessageItem message={mes.message} />)
     return (
         <div className={classes.content}>
             <div className={classes.messages}>
