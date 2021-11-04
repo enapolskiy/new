@@ -1,4 +1,7 @@
 
 .content {
     grid-area: section;
+    background-image: url("https://www.kcpinternational.com/wp-content/uploads/2021/01/Anime-girl.jpg");
+    background-image: 100%;
+    background-repeat: no-repeat;
 }

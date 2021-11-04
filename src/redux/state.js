@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 let state = {
     dialogsPage: {
         sendData: [
@@ -16,20 +18,23 @@ let state = {
         ]
     },
     chatPage: {
-        ChatMessage: [
+        chatMessage: [
             {id: 1, message: "Hi! how are you?32", like: "likes 12"},
             {id: 2, message: "Its my first post77!", like: "likes 22"},
-            {id: 3, message: "Hi! how are you?6767", like: "likes 12"},
-            {id: 4, message: "Its my first post!&^", like: "likes 22"}
+            // {id: 3, message: "Hi! how are you?6767", like: "likes 12"},
+            // {id: 4, message: "Its my first post!&^", like: "likes 22"}
         ]
     }
 }
-
-
-
-
-
-
+export let addPost = (postMessage) => {
+    let newPost = {
+        id:2,
+        message:postMessage,
+        like:0
+    }
+    state.chatPage.chatMessage.push(newPost);
+    rerenderEntireTree(state);
+}
 
 
 export  default state;

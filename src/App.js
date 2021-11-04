@@ -11,7 +11,8 @@ import Footer from "./components/Footer/Footer";
 import {BrowserRouter, Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
 import MyPosts from "./components/ChatDesk/MyPosts";
-import Chat from "./components/ChatDesk/Chat/Chat";
+
+
 
 
 function App(props) {
@@ -28,8 +29,9 @@ function App(props) {
         <Route path='/example3' component={Example3} />
         <Route path='/example4' component={Example4} />
         <Route path='/messages' render={ ()=><Messages state={props.state.dialogsPage} messageData={props.state.dialogsPage} />} />
-        <MyPosts state={props.state.chatPage} />
-        <Section  />
+        <MyPosts state={props.state.chatPage} addPost={props.addPost} />
+
+        {/*<Section  />*/}
      <Footer />
 
 
