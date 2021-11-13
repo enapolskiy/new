@@ -40,7 +40,7 @@ function App(props) {
                   updateNewMessageText={props.updateNewMessageText}/>
 
        {/*{<Section  />}*/}
-     <Footer />
+     {/*<Footer />*/}
 
 
     </div>
