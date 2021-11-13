@@ -1,4 +1,14 @@
 .posts {
-  margin-top: 10px;
+
   color: black;
+  background-color: maroon;
+}
+
+.textareaStyle {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.buttonStyle {
+  margin-left: 20px;
+  margin-top: 10px;
 }

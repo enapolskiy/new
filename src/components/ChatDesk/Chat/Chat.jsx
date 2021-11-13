@@ -9,22 +9,23 @@ let Chat = (props) =>{
     let addPost = () => {
         let text = newPostElement.current.value
         props.addPost (text);
-        newPostElement.current.value='';
+        props.updateNewMessageText('')
     }
+    let onPostChange = () =>{
+        let textMessage =newPostElement.current.value;
+        props.updateNewMessageText(textMessage)
+
+    }
+
     return (
         <div className={style.posts}>
             <div>
-                <textarea ref={newPostElement}></textarea>
+                <textarea className={style.textareaStyle} ref={newPostElement} onChange={onPostChange} value={props.newp} />
             </div>
             <div>
-                <button onClick={addPost}>Add post</button>
+                <button className={style.buttonStyle} onClick={addPost}>Add post</button>
             </div>
-            <h3>My posts</h3>
 
-
-            <div>
-                <h3>New post</h3>
-            </div>
 
 
         </div>

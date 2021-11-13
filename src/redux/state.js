@@ -23,7 +23,8 @@ let state = {
             {id: 2, message: "Its my first post77!", like: "likes 22"},
             // {id: 3, message: "Hi! how are you?6767", like: "likes 12"},
             // {id: 4, message: "Its my first post!&^", like: "likes 22"}
-        ]
+        ],
+        newp:'ymrkyrjyrk45'
     }
 }
 export let addPost = (postMessage) => {
@@ -34,6 +35,11 @@ export let addPost = (postMessage) => {
     }
     state.chatPage.chatMessage.push(newPost);
     rerenderEntireTree(state);
+}
+
+export let updateNewMessageText = (newMessageText) => {
+    state.chatPage.newp=newMessageText;
+    rerenderEntireTree(state)
 }
 
 

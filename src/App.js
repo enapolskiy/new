@@ -10,7 +10,8 @@ import Example4 from "./components/Example4/Example4";
 import Footer from "./components/Footer/Footer";
 import {BrowserRouter, Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
-import MyPosts from "./components/ChatDesk/MyPosts";
+import MyPosts from "./components/ChatDesk/MyPosts/MyPosts";
+import ChatDesk from "./components/ChatDesk/ChatDesk";
 
 
 
@@ -29,9 +30,9 @@ function App(props) {
         <Route path='/example3' component={Example3} />
         <Route path='/example4' component={Example4} />
         <Route path='/messages' render={ ()=><Messages state={props.state.dialogsPage} messageData={props.state.dialogsPage} />} />
-        <MyPosts state={props.state.chatPage} addPost={props.addPost} />
+        <ChatDesk chatPage={props.state.chatPage} addPost={props.addPost} updateNewMessageText={props.updateNewMessageText}/>
 
-        {/*<Section  />*/}
+       {/*{<Section  />}*/}
      <Footer />
 
 
