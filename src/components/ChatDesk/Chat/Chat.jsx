@@ -9,7 +9,7 @@ let Chat = (props) =>{
     let addPost = () => {
         let text = newPostElement.current.value
         props.addPost (text);
-        props.updateNewMessageText('')
+
     }
     let onPostChange = () =>{
         let textMessage =newPostElement.current.value;

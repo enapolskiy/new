@@ -12,6 +12,7 @@ import {BrowserRouter, Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
 import MyPosts from "./components/ChatDesk/MyPosts/MyPosts";
 import ChatDesk from "./components/ChatDesk/ChatDesk";
+import MessageDesk from "./components/Messages/MessageDesk";
 
 
 
@@ -29,8 +30,14 @@ function App(props) {
         <Route path='/example2' component={Example2} />
         <Route path='/example3' component={Example3} />
         <Route path='/example4' component={Example4} />
-        <Route path='/messages' render={ ()=><Messages state={props.state.dialogsPage} messageData={props.state.dialogsPage} />} />
-        <ChatDesk chatPage={props.state.chatPage} addPost={props.addPost} updateNewMessageText={props.updateNewMessageText}/>
+        <Route path='/messages' render={ ()=><MessageDesk dialogsPage={props.state.dialogsPage}
+                                                          messageData={props.state.messageData}
+                                                          sendData={props.state.sendData}
+                                                          addMessage={props.addMessage}
+                                                          updateMessageText={props.updateMessageText} />}/>
+        <ChatDesk chatPage={props.state.chatPage}
+                  addPost={props.addPost}
+                  updateNewMessageText={props.updateNewMessageText}/>
 
        {/*{<Section  />}*/}
      <Footer />

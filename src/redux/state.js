@@ -15,7 +15,8 @@ let state = {
             {id: 3, message: "Oy! im very glad to see you"},
             {id: 4, message: "Cool site!!"},
             {id: 5, message: "Cool site eah!!"}
-        ]
+        ],
+        newm:''
     },
     chatPage: {
         chatMessage: [
@@ -24,7 +25,7 @@ let state = {
             // {id: 3, message: "Hi! how are you?6767", like: "likes 12"},
             // {id: 4, message: "Its my first post!&^", like: "likes 22"}
         ],
-        newp:'ymrkyrjyrk45'
+        newp:''
     }
 }
 export let addPost = (postMessage) => {
@@ -34,13 +35,31 @@ export let addPost = (postMessage) => {
         like:0
     }
     state.chatPage.chatMessage.push(newPost);
+    state.chatPage.newp=('');
     rerenderEntireTree(state);
 }
 
-export let updateNewMessageText = (newMessageText) => {
-    state.chatPage.newp=newMessageText;
+export let updateNewMessageText = (newPostText) => {
+    state.chatPage.newp=newPostText;
     rerenderEntireTree(state)
 }
+
+export let addMessage = (dialogMessage) =>{
+    let newMessage = {
+        id:2,
+        message: dialogMessage
+    }
+    state.dialogsPage.messageData.push(newMessage)
+    state.dialogsPage.newm= ('');
+    rerenderEntireTree(state)
+}
+
+export let updateMessageText = (newText) =>{
+    state.dialogsPage.newm = newText;
+    rerenderEntireTree(state)
+}
+
+
 
 
 export  default state;
