@@ -31,7 +31,7 @@ let state = {
 export let addPost = (postMessage) => {
     let newPost = {
         id:2,
-        message:postMessage,
+        message: state.dialogsPage.newp,
         like:0
     }
     state.chatPage.chatMessage.push(newPost);
@@ -47,7 +47,7 @@ export let updateNewMessageText = (newPostText) => {
 export let addMessage = (dialogMessage) =>{
     let newMessage = {
         id:2,
-        message: dialogMessage
+        message: state.dialogsPage.newm
     }
     state.dialogsPage.messageData.push(newMessage)
     state.dialogsPage.newm= ('');
