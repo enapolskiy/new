@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from "../render";
+let rerenderEntireTree = () => {
+    console.log("trertre")
+}
 
 let state = {
     dialogsPage: {
@@ -57,6 +59,10 @@ export let addMessage = (dialogMessage) =>{
 export let updateMessageText = (newText) =>{
     state.dialogsPage.newm = newText;
     rerenderEntireTree(state)
+}
+
+export let subscribe = (observer) => {
+    rerenderEntireTree = observer;
 }
 
 
