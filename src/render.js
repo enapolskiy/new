@@ -8,13 +8,16 @@ import {addPost} from "./redux/state";
 import {updateNewMessageText} from "./redux/state"
 import {addMessage} from "./redux/state";
 import {updateMessageText} from "./redux/state";
+import {BrowserRouter} from "react-router-dom";
 
 
 export let rerenderEntireTree = (state)=> {
     ReactDOM.render(
         <React.StrictMode>
+            <BrowserRouter>
             <App state={state} addPost={addPost} updateNewMessageText={updateNewMessageText} addMessage={addMessage}
                  updateMessageText={updateMessageText}/>
+            </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
     );

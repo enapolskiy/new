@@ -31,7 +31,7 @@ let state = {
 export let addPost = (postMessage) => {
     let newPost = {
         id:2,
-        message: state.dialogsPage.newp,
+        message: state.chatPage.newp,
         like:0
     }
     state.chatPage.chatMessage.push(newPost);

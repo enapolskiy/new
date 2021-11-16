@@ -20,7 +20,7 @@ import MessageDesk from "./components/Messages/MessageDesk";
 function App(props) {
 
   return (
-    <BrowserRouter>
+
     <div className="App-cont">
      <Header />
      <Nav />
@@ -44,7 +44,7 @@ function App(props) {
 
 
     </div>
-</BrowserRouter>
+
 
 
 

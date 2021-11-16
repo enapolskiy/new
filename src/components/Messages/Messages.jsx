@@ -5,8 +5,8 @@ import MessageItem from "./MessageItem/MessageItem";
 import {updateMessageText} from "../../redux/state";
 
 
-// <DialogItem />;
-// <MessageItem />;
+<DialogItem />;
+<MessageItem />;
 
 const Messages = (props) => {
     let sendElement = props.sendData.map (send =>  <DialogItem name={send.name} id={send.id}/>)
