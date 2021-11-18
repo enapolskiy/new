@@ -33,11 +33,9 @@ function App(props) {
         <Route path='/messages' render={ ()=><MessageDesk dialogsPage={props.state.dialogsPage}
                                                           messageData={props.state.messageData}
                                                           sendData={props.state.sendData}
-                                                          addMessage={props.addMessage}
-                                                          updateMessageText={props.updateMessageText} />}/>
+                                                          dispatch={props.dispatch} />}/>
         <ChatDesk chatPage={props.state.chatPage}
-                  addPost={props.addPost}
-                  updateNewMessageText={props.updateNewMessageText}/>
+                  dispatch={props.dispatch}/>
 
        {/*{<Section  />}*/}
      {/*<Footer />*/}

@@ -7,7 +7,7 @@ const ChatDesk = (props) => {
     return (
         <div>
 
-            <Chat  addPost={props.addPost} newp={props.chatPage.newp} updateNewMessageText={props.updateNewMessageText} />
+            <Chat  dispatch={props.dispatch} newp={props.chatPage.newp} />
             <MyPosts chatPage={props.chatPage.chatMessage} chatMessage={props.chatPage.chatMessage}  />
 
         </div>

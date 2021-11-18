@@ -33,35 +33,66 @@ let store = {
     _callSubscriber  ()  {
         console.log("trertre")
     },
-    addPost  (postMessage)  {
-        let newPost = {
-            id:2,
-            message: this._state.chatPage.newp,
-            like:0
-        }
-        this._state.chatPage.chatMessage.push(newPost);
-        this._state.chatPage.newp=('');
-        this._callSubscriber(this._state);
-    },
-    updateNewMessageText  (newPostText)  {
-        this._state.chatPage.newp=newPostText;
-        this._callSubscriber(this._state)
-    },
-    addMessage (dialogMessage) {
-        let newMessage = {
-            id:2,
-            message: this._state.dialogsPage.newm
-        }
-        this._state.dialogsPage.messageData.push(newMessage)
-        this._state.dialogsPage.newm= ('');
-        this._callSubscriber(this._state)
-    },
-    updateMessageText  (newText) {
-        this._state.dialogsPage.newm = newText;
-        this._callSubscriber(this._state)
-    },
     subscribe  (observer)  {
         this._callSubscriber = observer;
+    },
+    // addPost  (postMessage)  {
+    //     let newPost = {
+    //         id:2,
+    //         message: this._state.chatPage.newp,
+    //         like:0
+    //     }
+    //     this._state.chatPage.chatMessage.push(newPost);
+    //     this._state.chatPage.newp=('');
+    //     this._callSubscriber(this._state);
+    // },
+    // updateNewMessageText  (newPostText)  {
+    //     this._state.chatPage.newp=newPostText;
+    //     this._callSubscriber(this._state)
+    // },
+    // addMessage (dialogMessage) {
+    //     let newMessage = {
+    //         id:2,
+    //         message: this._state.dialogsPage.newm
+    //     }
+    //     this._state.dialogsPage.messageData.push(newMessage)
+    //     this._state.dialogsPage.newm= ('');
+    //     this._callSubscriber(this._state)
+    // },
+    // updateMessageText  (newText) {
+    //     this._state.dialogsPage.newm = newText;
+    //     this._callSubscriber(this._state)
+    // },
+    dispatch (action) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id:2,
+                message: this._state.chatPage.newp,
+                like:0
+            }
+            this._state.chatPage.chatMessage.push(newPost);
+            this._state.chatPage.newp=('');
+            this._callSubscriber(this._state);
+
+        }
+        else if (action.type === 'UPDATE-NEW-MESSAGE-TEXT'){
+            this._state.chatPage.newp=action.newPostText;
+            this._callSubscriber(this._state)
+        }
+
+        if (action.type === 'ADD-MESSAGE'){
+            let newMessage = {
+                id:2,
+                message: this._state.dialogsPage.newm
+            }
+            this._state.dialogsPage.messageData.push(newMessage)
+            this._state.dialogsPage.newm= ('');
+            this._callSubscriber(this._state)
+        }
+        else if (action.type === 'UPDATE-MESSAGE-TEXT') {
+            this._state.dialogsPage.newm = action.newText;
+            this._callSubscriber(this._state)
+        }
     }
 }
 

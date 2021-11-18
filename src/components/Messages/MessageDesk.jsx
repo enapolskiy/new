@@ -12,9 +12,8 @@ const MessageDesk = (props) => {
             <Messages dialogsPage={props.dialogsPage}
                       sendData={props.dialogsPage.sendData}
                       messageData={props.messageData}
-                      addMessage={props.addMessage}
-                      newm={props.dialogsPage.newm}
-                      updateMessageText={props.updateMessageText}/>
+                      dispatch={props.dispatch}
+                      newm={props.dialogsPage.newm}/>
             <DialogItem />
             <MessageItem />
 

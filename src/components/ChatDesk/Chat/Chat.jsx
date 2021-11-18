@@ -8,12 +8,13 @@ let Chat = (props) =>{
 
     let addPost = () => {
         let text = newPostElement.current.value
-        props.addPost (text);
+        // props.addPost (text);
+        props.dispatch({type: 'ADD-POST', text})
 
     }
     let onPostChange = () =>{
         let textMessage =newPostElement.current.value;
-        props.updateNewMessageText(textMessage)
+        props.dispatch({type:'UPDATE-NEW-MESSAGE-TEXT', newPostText:textMessage} )
 
     }
 

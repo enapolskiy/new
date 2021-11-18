@@ -16,13 +16,13 @@ const Messages = (props) => {
 
     let addMessage = () =>{
         let text = newMessageElement.current.value;
-        props.addMessage(text)
-        // newMessageElement.current.value = '';
+        props.dispatch({type:'ADD-MESSAGE', text});
+
 
     }
     let onMessageChange = () =>{
 let messageText=newMessageElement.current.value;
-                props.updateMessageText(messageText)
+        props.dispatch({type:'UPDATE-MESSAGE-TEXT', newText:messageText});
     }
 
     return (
