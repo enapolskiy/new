@@ -3,6 +3,7 @@ import classes from "./Messages.module.css";
 import DialogItem from "./Dialogs/DialogItem";
 import MessageItem from "./MessageItem/MessageItem";
 import {updateMessageText} from "../../redux/state";
+import {addMessageActionCreator, updateMessageTextActiveCreator} from "../../redux/state";
 
 
 <DialogItem />;
@@ -16,13 +17,13 @@ const Messages = (props) => {
 
     let addMessage = () =>{
         let text = newMessageElement.current.value;
-        props.dispatch({type:'ADD-MESSAGE', text});
+        props.dispatch(addMessageActionCreator());
 
 
     }
     let onMessageChange = () =>{
 let messageText=newMessageElement.current.value;
-        props.dispatch({type:'UPDATE-MESSAGE-TEXT', newText:messageText});
+        props.dispatch(updateMessageTextActiveCreator(messageText));
     }
 
     return (

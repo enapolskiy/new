@@ -95,5 +95,11 @@ let store = {
         }
     }
 }
+export const addMessageActionCreator = () => {
+    return {type:'ADD-MESSAGE'}
+}
+export const updateMessageTextActiveCreator = (newText) => {
+    return {type:'UPDATE-MESSAGE-TEXT', newText:newText}
+}
 
 export  default store;
