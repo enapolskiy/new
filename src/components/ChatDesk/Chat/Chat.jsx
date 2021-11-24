@@ -1,6 +1,6 @@
 import style from "./Chat.module.css"
 import React from "react";
-import {addPostActionCreator, updateNewMessageTextActionCreator} from "../../../redux/state";
+import {addPostActionCreator, updateNewMessageTextActionCreator} from "../../../redux/chat-reducer";
 
 let Chat = (props) =>{
 
