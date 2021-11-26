@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Messages.module.css";
 import DialogItem from "./Dialogs/DialogItem";
 import MessageItem from "./MessageItem/MessageItem";
-import {updateMessageText} from "../../redux/state";
+import {updateMessageText} from "../../redux/store";
 import {addMessageActionCreator, updateMessageTextActiveCreator} from "../../redux/messages-reducer";
 
 

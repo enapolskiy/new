@@ -2,7 +2,18 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
-const chatReducer = (state, action) => {
+let initialState = {
+
+    chatMessage: [
+        {id: 1, message: "Hi! how are you?32", like: "likes 12"},
+        {id: 2, message: "Its my first post77!", like: "likes 22"},
+        // {id: 3, message: "Hi! how are you?6767", like: "likes 12"},
+        // {id: 4, message: "Its my first post!&^", like: "likes 22"}
+    ],
+        newp:''
+};
+
+const chatReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_POST':
             let newPost = {

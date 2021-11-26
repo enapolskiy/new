@@ -3,21 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import store from "./redux/state";
+import store from "./redux/redux-store";
 import {BrowserRouter} from "react-router-dom";
 
 export let _callSubscriber = (state)=> {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state} dispatch={store.dispatch.bind(store)}/>
+                <App state={state} store={store} dispatch={store.dispatch.bind(store)}/>
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
     )
 }
 _callSubscriber(store.getState());
-store.subscribe (_callSubscriber);
+store.subscribe (() =>{
+    let state = store.getState();
+    _callSubscriber(state)
+})
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
