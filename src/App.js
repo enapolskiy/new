@@ -35,7 +35,8 @@ debugger
                                                           sendData={props.state.sendData}
                                                           dispatch={props.dispatch} />}/>
         <ChatDesk chatPage={props.state.chatPage}
-                  dispatch={props.dispatch}/>
+                  dispatch={props.dispatch}
+                  store={props.store}/>
 
        {/*{<Section  />}*/}
      {/*<Footer />*/}

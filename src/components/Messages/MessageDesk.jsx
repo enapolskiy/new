@@ -9,7 +9,8 @@ const MessageDesk = (props) => {
         <div>
 
 
-            <Messages dialogsPage={props.dialogsPage}
+            <Messages 
+                dialogsPage={props.dialogsPage}
                       sendData={props.dialogsPage.sendData}
                       messageData={props.messageData}
                       dispatch={props.dispatch}

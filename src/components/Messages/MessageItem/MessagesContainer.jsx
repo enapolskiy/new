@@ -6,10 +6,10 @@ import {updateMessageText} from "../../redux/store";
 import {addMessageActionCreator, updateMessageTextActiveCreator} from "../../redux/messages-reducer";
 
 
-// <DialogItem />;
-// <MessageItem />;
+<DialogItem />;
+<MessageItem />;
 
-const Messages = (props) => {
+const MessagesContainer = (props) => {
     let sendElement = props.sendData.map (send =>  <DialogItem name={send.name} id={send.id}/>)
     let messageElement = props.dialogsPage.messageData.map (mes => <MessageItem message={mes.message} />)
 
@@ -22,7 +22,7 @@ const Messages = (props) => {
 
     }
     let onMessageChange = () =>{
-let messageText=newMessageElement.current.value;
+        let messageText=newMessageElement.current.value;
         props.dispatch(updateMessageTextActiveCreator(messageText));
     }
 
@@ -37,14 +37,14 @@ let messageText=newMessageElement.current.value;
                 </div>
             </div>
             <div className={classes.messageArea}>
-           <div>
-               <textarea ref={newMessageElement} onChange={onMessageChange} value={props.newm}/>
-           </div>
-            <div>
-                <button onClick={addMessage}>Message</button>
-            </div>
+                <div>
+                    <textarea ref={newMessageElement} onChange={onMessageChange} value={props.newm}/>
+                </div>
+                <div>
+                    <button onClick={addMessage}>Message</button>
+                </div>
             </div>
         </div>
     )
 }
-export default Messages;
+export default MessagesContainer;

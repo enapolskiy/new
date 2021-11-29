@@ -6,13 +6,13 @@ let Chat = (props) =>{
 
     let newPostElement = React.createRef();
 
-    let addPost = () => {
-        props.dispatch(addPostActionCreator())
+    let onAddPost = () => {
+        props.addPost();
 
     }
     let onPostChange = () =>{
         let textMessage =newPostElement.current.value;
-        props.dispatch(updateNewMessageTextActionCreator(textMessage))
+        props.updateNewMessageText(textMessage)
 
     }
 
@@ -23,7 +23,7 @@ let Chat = (props) =>{
                           onChange={onPostChange} value={props.newp} />
             </div>
             <div>
-                <button className={style.buttonStyle} onClick={addPost}>Add post</button>
+                <button className={style.buttonStyle} onClick={onAddPost}>Add post</button>
             </div>
 
 
