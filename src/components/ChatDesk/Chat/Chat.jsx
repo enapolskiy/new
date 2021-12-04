@@ -1,8 +1,11 @@
 import style from "./Chat.module.css"
 import React from "react";
 import {addPostActionCreator, updateNewMessageTextActionCreator} from "../../../redux/chat-reducer";
+import Post from "../Post/Post";
 
 let Chat = (props) =>{
+    debugger
+    let postsItem = props.chatMessage.map(post => <Post message={post.message} like={post.like}/>)
 
     let newPostElement = React.createRef();
 
@@ -18,6 +21,7 @@ let Chat = (props) =>{
 
     return (
         <div className={style.posts}>
+            {postsItem}
             <div>
                 <textarea className={style.textareaStyle} ref={newPostElement}
                           onChange={onPostChange} value={props.newp} />
@@ -25,7 +29,9 @@ let Chat = (props) =>{
             <div>
                 <button className={style.buttonStyle} onClick={onAddPost}>Add post</button>
             </div>
+            <div className={style.chatItem}>
 
+            </div>
 
 
         </div>

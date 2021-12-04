@@ -10,15 +10,14 @@ import Example4 from "./components/Example4/Example4";
 import Footer from "./components/Footer/Footer";
 import {BrowserRouter, Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
-import MyPosts from "./components/ChatDesk/MyPosts/MyPosts";
 import ChatDesk from "./components/ChatDesk/ChatDesk";
 import MessageDesk from "./components/Messages/MessageDesk";
 
 
 
 
-function App(props) {
-debugger
+function App() {
+
   return (
 
     <div className="App-cont">
@@ -31,15 +30,18 @@ debugger
         <Route path='/example3' component={Example3} />
         <Route path='/example4' component={Example4} />
         <Route path='/messages' render={ ()=><MessageDesk
-                                                             store={props.store}
+                                                             //store={props.store}
                                                           // dialogsPage={props.state.dialogsPage}
                                                           // messageData={props.state.messageData}
                                                           // sendData={props.state.sendData}
                                                           // dispatch={props.dispatch}
         />}/>
-        <ChatDesk chatPage={props.state.chatPage}
-                  dispatch={props.dispatch}
-                  store={props.store}/>
+        <ChatDesk
+            //chatPage={props.state.chatPage}
+                  //dispatch={props.dispatch}
+                  //store={props.store}
+                  //chatMessage={props.store.chatMessage}
+            />
 
        {/*{<Section  />}*/}
      {/*<Footer />*/}

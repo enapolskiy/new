@@ -1,14 +1,24 @@
 .posts {
-
+  padding-top: 20px;
+  padding-left: 20px;
   color: black;
   background-color: maroon;
 }
 
 .textareaStyle {
-  margin-left: 20px;
+
   margin-top: 20px;
 }
 .buttonStyle {
-  margin-left: 20px;
+
   margin-top: 10px;
+}
+
+.posts   { grid-area: aside;
+  background-color: maroon}
+
+.chatItem {
+
+
+  background-color: maroon;
 }

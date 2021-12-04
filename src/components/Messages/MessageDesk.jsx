@@ -5,13 +5,13 @@ import Post from "../ChatDesk/Post/Post";
 import MessagesContainer from "./MessagesContainer";
 
 
-const MessageDesk = (props) => {
+const MessageDesk = () => {
     return (
         <div>
 
 
             <MessagesContainer
-                store={props.store}
+                //store={props.store}
                       // dialogsPage={props.dialogsPage}
                       // sendData={props.dialogsPage.sendData}
                       // messageData={props.messageData}
