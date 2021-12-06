@@ -15,7 +15,9 @@
 }
 
 .posts   { grid-area: aside;
-  background-color: maroon}
+  background-color: maroon;
+  height: 481px;
+}
 
 .chatItem {
 

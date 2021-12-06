@@ -44,7 +44,7 @@ function App() {
             />
 
        {/*{<Section  />}*/}
-     {/*<Footer />*/}
+     <Footer />
 
 
     </div>

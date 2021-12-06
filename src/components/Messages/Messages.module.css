@@ -1,8 +1,7 @@
 .content {
     grid-area: section;
- /*display: flex;*/
- /*   justify-content: space-evenly;*/
     background-color: aquamarine;
+    height: 501px;
 }
 
 .messages {
