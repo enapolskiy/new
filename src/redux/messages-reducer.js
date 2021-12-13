@@ -25,7 +25,7 @@ const messagesReducer = (state = initialState, action) => {
         case ADD_MESSAGE: {
             let newMessage = {
                 id: 6,
-                message: state.newm
+                message: stateCopy.newm
             }
             stateCopy.messageData = [...state.messageData]
             stateCopy.messageData.push(newMessage)

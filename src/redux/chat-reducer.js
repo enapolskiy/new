@@ -24,7 +24,7 @@ const chatReducer = (state = initialState, action) => {
             let stateCopy = {...state}
             stateCopy.chatMessage = [...state.chatMessage]
             stateCopy.chatMessage.push(newPost);
-            stateCopy.newp = ('');
+            stateCopy.newp = '';
             return stateCopy;
         }
         case UPDATE_NEW_MESSAGE_TEXT: {

@@ -46,7 +46,7 @@ let mapStateToProps = (state) => {
     return {
         sendData: state.dialogsPage.sendData,
         messageData: state.dialogsPage.messageData,
-        // newm: state.dialogsPage.newm
+        newm: state.dialogsPage.newm
     }
 }
 let mapDispatchToProps = (dispatch) => {
