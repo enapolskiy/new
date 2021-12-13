@@ -2,7 +2,6 @@ const ADD_MESSAGE = 'ADD-MESSAGE';
 const UPDATE_MESSAGE_TEXT = 'UPDATE-MESSAGE-TEXT'
 
 let initialState = {
-
     sendData: [
         {id: 1, name: "Dimych"},
         {id: 2, name: "John"},
@@ -21,26 +20,30 @@ let initialState = {
 };
 
 const messagesReducer = (state = initialState, action) => {
+    let stateCopy = {...state}
     switch (action.type) {
-        case 'ADD_MESSAGE':
+        case ADD_MESSAGE: {
             let newMessage = {
-                id: 2,
+                id: 6,
                 message: state.newm
             }
-            state.messageData.push(newMessage)
-            state.newm = ('');
-           return state
-        case 'UPDATE_MESSAGE_TEXT':
-            state.newm = action.newText;
-            return state
-
+            stateCopy.messageData = [...state.messageData]
+            stateCopy.messageData.push(newMessage)
+            stateCopy.newm = '';
+            return stateCopy;
+        }
+        case UPDATE_MESSAGE_TEXT: {
+            stateCopy.newm = action.newText;
+            return stateCopy;
+        }
         default:
             return state;
     }
 
 }
-export  default messagesReducer;
 export const addMessageActionCreator = () =>
-    ({type:'ADD_MESSAGE'});
-export const updateMessageTextActiveCreator = (newText) =>
-    ({type:'UPDATE_MESSAGE_TEXT', newText:newText});
+    ({type: ADD_MESSAGE});
+export const updateMessageTextActiveCreator = (messageText) =>
+    ({type: UPDATE_MESSAGE_TEXT, newText : messageText});
+export  default messagesReducer;
+

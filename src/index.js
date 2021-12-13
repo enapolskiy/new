@@ -8,7 +8,7 @@ import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 
 
-export let _callSubscriber = (state)=> {
+
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
@@ -18,13 +18,9 @@ export let _callSubscriber = (state)=> {
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
-    )
-}
-_callSubscriber(store.getState());
-store.subscribe (() =>{
-    let state = store.getState();
-    _callSubscriber(state)
-})
+    );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

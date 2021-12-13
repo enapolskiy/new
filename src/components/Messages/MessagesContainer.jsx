@@ -46,19 +46,21 @@ let mapStateToProps = (state) => {
     return {
         sendData: state.dialogsPage.sendData,
         messageData: state.dialogsPage.messageData,
-        newm: state.dialogsPage.newm
+        // newm: state.dialogsPage.newm
     }
 }
-let mapDispatchToProps = () => {
+let mapDispatchToProps = (dispatch) => {
     return {
         addMessage: () => {
-            store.dispatch(addMessageActionCreator());
+            dispatch(addMessageActionCreator());
         },
+
         updateMessageText: (messageText) => {
             let action = updateMessageTextActiveCreator(messageText);
-            store.dispatch(action);
+            dispatch(action);
         }
+
     }
 }
-const MessagesContainer = connect (mapStateToProps, mapDispatchToProps) (Messages);
+const MessagesContainer = connect(mapStateToProps, mapDispatchToProps) (Messages);
 export default MessagesContainer;

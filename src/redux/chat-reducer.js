@@ -15,19 +15,23 @@ let initialState = {
 
 const chatReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_POST':
+        case ADD_POST: {
             let newPost = {
                 id: 2,
                 message: state.newp,
                 like: 0
             }
-            state.chatMessage.push(newPost);
-            state.newp = ('');
-            return state;
-        case 'UPDATE_NEW_MESSAGE_TEXT':
-            state.newp = action.newPostText;
-            return state;
-
+            let stateCopy = {...state}
+            stateCopy.chatMessage = [...state.chatMessage]
+            stateCopy.chatMessage.push(newPost);
+            stateCopy.newp = ('');
+            return stateCopy;
+        }
+        case UPDATE_NEW_MESSAGE_TEXT: {
+            let stateCopy = {...state};
+            stateCopy.newp = action.newPostText;
+            return stateCopy;
+        }
         default:
             return state;
     }
@@ -35,7 +39,7 @@ const chatReducer = (state = initialState, action) => {
 
 }
 export const addPostActionCreator = () =>
-    ({type:'ADD_POST'});
+    ({type:ADD_POST});
 export const updateNewMessageTextActionCreator = (textMessage) =>
-    ({type:'UPDATE_NEW_MESSAGE_TEXT', newPostText:textMessage});
+    ({type:UPDATE_NEW_MESSAGE_TEXT, newPostText:textMessage});
 export  default chatReducer;
