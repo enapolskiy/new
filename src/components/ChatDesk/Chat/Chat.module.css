@@ -1,8 +1,11 @@
 .posts {
+  grid-area: aside;
   padding-top: 20px;
   padding-left: 20px;
+  height: 481px;
   color: black;
   background-color: maroon;
+
 }
 
 .textareaStyle {
@@ -14,10 +17,6 @@
   margin-top: 10px;
 }
 
-.posts   { grid-area: aside;
-  background-color: maroon;
-  height: 481px;
-}
 
 .chatItem {
 

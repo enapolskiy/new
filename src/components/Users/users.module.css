@@ -1,0 +1,11 @@
+.content {
+    grid-area: section;
+    background-color: aquamarine;
+}
+
+.userPhoto {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 40px;
+}

@@ -4,7 +4,6 @@ import {addPostActionCreator, updateNewMessageTextActionCreator} from "../../../
 import Post from "../Post/Post";
 
 let Chat = (props) =>{
-    debugger
     let postsItem = props.chatMessage.map(post => <Post message={post.message} like={post.like}/>)
 
     let newPostElement = React.createRef();

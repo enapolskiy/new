@@ -12,12 +12,13 @@ import {BrowserRouter, Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
 import ChatDesk from "./components/ChatDesk/ChatDesk";
 import MessageDesk from "./components/Messages/MessageDesk";
+import UsersContainer from "./components/Users/UsersContainer";
 
 
 
 
-function App() {
 
+const App = () => {
   return (
 
     <div className="App-cont">
@@ -29,22 +30,11 @@ function App() {
         <Route path='/example2' component={Example2} />
         <Route path='/example3' component={Example3} />
         <Route path='/example4' component={Example4} />
-        <Route path='/messages' render={ ()=><MessageDesk
-                                                             //store={props.store}
-                                                          // dialogsPage={props.state.dialogsPage}
-                                                          // messageData={props.state.messageData}
-                                                          // sendData={props.state.sendData}
-                                                          // dispatch={props.dispatch}
-        />}/>
-        <ChatDesk
-            //chatPage={props.state.chatPage}
-                  //dispatch={props.dispatch}
-                  //store={props.store}
-                  //chatMessage={props.store.chatMessage}
-            />
+        <Route path='/messages' render={ ()=><MessageDesk/>}/>
+        <ChatDesk/>
+        <Route path='/users' render={ ()=><UsersContainer />} />
 
-       {/*{<Section  />}*/}
-     <Footer />
+        <Footer />
 
 
     </div>

@@ -2,7 +2,7 @@ import style from "./Footer.module.css";
 
 const Footer = (proops) => {
     return (
-        <footer className="Footer">Подвал</footer>
+        <footer className="Footer"></footer>
     )
 }
 

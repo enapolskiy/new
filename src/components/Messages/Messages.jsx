@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Messages.module.css";
+import style from "./Messages.module.css";
 import DialogItem from "./Dialogs/DialogItem";
 import MessageItem from "./MessageItem/MessageItem";
 // import {updateMessageText} from "../../redux/store";
@@ -25,16 +25,16 @@ let messageText=newMessageElement.current.value;
     }
 
     return (
-        <div className={classes.content}>
-            <div className={classes.messages}>
-                <div className={classes.messagesItem}>
+        <div className={style.content}>
+            <div className={style.messages}>
+                <div className={style.messagesItem}>
                     {sendElement}
                 </div>
-                <div className={classes.messageItem}>
+                <div className={style.messageItem}>
                     {messageElement}
                 </div>
             </div>
-            <div className={classes.messageArea}>
+            <div className={style.messageArea}>
            <div>
                <textarea ref={newMessageElement} onChange={onMessageChange} value={props.newm}/>
            </div>
