@@ -1,5 +1,5 @@
 .content {
-    grid-area: section;
+    grid-area: header;
     background-color: aquamarine;
 }
 
@@ -8,4 +8,9 @@
     height: 60px;
 
     border-radius: 40px;
+}
+
+.usersButton {
+    padding: 10px;
+    margin: 15px;
 }
