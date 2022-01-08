@@ -13,6 +13,7 @@ import Messages from "./components/Messages/Messages";
 import ChatDesk from "./components/ChatDesk/ChatDesk";
 import MessageDesk from "./components/Messages/MessageDesk";
 import UsersContainer from "./components/Users/UsersContainer";
+import Product from "./components/Product/Product";
 
 
 
@@ -31,8 +32,9 @@ const App = () => {
         <Route path='/example3' component={Example3} />
         <Route path='/example4' component={Example4} />
         <Route path='/messages' render={ ()=><MessageDesk/>}/>
-        <ChatDesk/>
-        <Route path='/users' render={ ()=><UsersContainer />} />
+        <ChatDesk />
+        <Product />
+        <Route path='/users' render={ ()=><UsersContainer />}  />
 
         <Footer />
 

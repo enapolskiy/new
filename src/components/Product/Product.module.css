@@ -1,0 +1,14 @@
+.productW {
+    margin-left: 70px;
+    margin-right: 70px;
+display: flex;
+    justify-content: space-around;
+   grid-area: product;
+
+}
+
+.p {
+    width: 200px;
+    height: 300px;
+    background-color: lightslategray;
+}
