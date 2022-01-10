@@ -33,7 +33,7 @@ const App = () => {
         <Route path='/example4' component={Example4} />
         <Route path='/messages' render={ ()=><MessageDesk/>}/>
         <ChatDesk />
-        <Product />
+        {/*<Product />*/}
         <Route path='/users' render={ ()=><UsersContainer />}  />
 
         <Footer />
